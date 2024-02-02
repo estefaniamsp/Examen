@@ -10,4 +10,7 @@ public class form1 {
     private JButton a7Button;
     private JButton a8Button;
     protected JPanel panel1;
+    private JButton a9Button;
+    private JButton a0Button;
+    private JButton ENTER;
 }
