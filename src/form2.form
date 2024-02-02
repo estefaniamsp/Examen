@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="form2">
-  <grid id="27dc6" binding="panel2" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel2" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
@@ -8,58 +8,46 @@
     <properties/>
     <border type="none"/>
     <children>
-      <toolbar id="f6f83">
+      <component id="dd1c0" class="javax.swing.JButton" binding="salirButton" default-binding="true">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="-1" height="20"/>
-          </grid>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="506f3" class="javax.swing.JButton" binding="button1" default-binding="true">
-            <constraints/>
-            <properties>
-              <text value="Button"/>
-            </properties>
-          </component>
-          <component id="a4600" class="javax.swing.JButton" binding="button2" default-binding="true">
-            <constraints/>
-            <properties>
-              <text value="Button"/>
-            </properties>
-          </component>
-          <component id="c14d5" class="javax.swing.JButton" binding="button3" default-binding="true">
-            <constraints/>
-            <properties>
-              <text value="Button"/>
-            </properties>
-          </component>
-          <component id="dd1c0" class="javax.swing.JButton" binding="button4" default-binding="true">
-            <constraints/>
-            <properties>
-              <text value="Button"/>
-            </properties>
-          </component>
-          <component id="2a111" class="javax.swing.JButton" binding="button5" default-binding="true">
-            <constraints/>
-            <properties>
-              <text value="Button"/>
-            </properties>
-          </component>
-          <component id="773bd" class="javax.swing.JButton" binding="button6" default-binding="true">
-            <constraints/>
-            <properties>
-              <text value="Button"/>
-            </properties>
-          </component>
-        </children>
-      </toolbar>
-      <vspacer id="a45fe">
+        <properties>
+          <text value="Salir"/>
+        </properties>
+      </component>
+      <component id="c14d5" class="javax.swing.JButton" binding="depositoButton" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-      </vspacer>
+        <properties>
+          <text value="Deposito"/>
+        </properties>
+      </component>
+      <component id="a4600" class="javax.swing.JButton" binding="retiroButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Retiro"/>
+        </properties>
+      </component>
+      <component id="506f3" class="javax.swing.JButton" binding="verSaldoButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Ver Saldo"/>
+        </properties>
+      </component>
+      <component id="433cb" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Transacción a Realizar"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
