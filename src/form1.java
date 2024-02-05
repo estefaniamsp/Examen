@@ -156,13 +156,5 @@ public class form1 {
                 System.exit(0);
             }
         });
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(!labelC.getText().contains(".")){
-                    labelC.setText(labelC.getText()+button1.getText());
-                }
-            }
-        });
     }
 }

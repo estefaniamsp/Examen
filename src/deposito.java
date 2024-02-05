@@ -19,6 +19,7 @@ public class deposito {
     protected JPanel PDeposito;
     private JButton BORRARButton;
     private JButton button1;
+    private JButton button2;
 
     public deposito(double dinero) {
 
@@ -136,6 +137,14 @@ public class deposito {
                     strB.deleteCharAt(deposito.getText().length() -1);
                     backspace= String.valueOf(strB);
                     deposito.setText(backspace);
+                }
+            }
+        });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(!deposito.getText().contains(".")){
+                    deposito.setText(deposito.getText()+button1.getText());
                 }
             }
         });

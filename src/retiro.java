@@ -21,6 +21,7 @@ public class retiro {
     private JButton BORRARButton;
     private JButton MENUButton;
     private JButton button1;
+    private JButton button2;
 
     public retiro(double dinero) {
         a1Button.addActionListener(new ActionListener() {
@@ -138,8 +139,17 @@ public class retiro {
 
                 }else{
                     JOptionPane.showMessageDialog(null, "Por favor ten en cuenta que el valor minimo de retiro es $10 y solo se puede retirar cantidades en multiplos de 10.\n Asegurate de ingresar un monto valido antes de continuar. \nGRACIAS!!");
+                    Cantidad.setText("");
                 }
 
+            }
+        });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(!Cantidad.getText().contains(".")){
+                    Cantidad.setText(Cantidad.getText()+button1.getText());
+                }
             }
         });
     }

@@ -41,7 +41,7 @@
         </constraints>
         <properties>
           <font name="Fira Code" size="14" style="0"/>
-          <text value="Ver Saldo"/>
+          <text value="Saldo"/>
         </properties>
       </component>
       <component id="1ed0b" class="javax.swing.JRadioButton" binding="salirRadioButton" default-binding="true">
@@ -50,7 +50,7 @@
         </constraints>
         <properties>
           <font name="Fira Code" size="14" style="0"/>
-          <text value="Salir    "/>
+          <text value="Salir "/>
         </properties>
       </component>
     </children>

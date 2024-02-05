@@ -10,7 +10,7 @@ public class form2 {
     private JRadioButton retiroRadioButton;
     private JRadioButton verSaldoRadioButton;
     private JRadioButton salirRadioButton;
-    static double dinero = 100;
+    static double dinero = 0;
 
     public form2() {
         ButtonGroup buttonGroup = new ButtonGroup();
