@@ -1,60 +1,81 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class form2 {
 
-
-    private JButton verSaldoButton;
-    private JButton retiroButton;
-    protected JButton depositoButton;
-    private JButton salirButton;
     protected JPanel panel2;
+    private JRadioButton depositoRadioButton;
+    private JRadioButton retiroRadioButton;
+    private JRadioButton verSaldoRadioButton;
+    private JRadioButton salirRadioButton;
 
 
     public form2() {
-        depositoButton.addActionListener(new ActionListener() {
+        ButtonGroup buttonGroup = new ButtonGroup();
+        buttonGroup.add(depositoRadioButton);
+        buttonGroup.add(verSaldoRadioButton);
+        buttonGroup.add(retiroRadioButton);
+        buttonGroup.add(salirRadioButton);
+
+        depositoRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(depositoButton);
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(depositoRadioButton);
                 frame.dispose();
 
-                JFrame frame3 = new JFrame("Cajero");
+                Color color1= new Color(142, 155, 160);
+                JFrame frame3 = new JFrame("Deposito");
                 frame3.setContentPane(new deposito().PDeposito);
                 frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.getContentPane().setBackground(color1);
                 frame3.setVisible(true);
                 frame3.setSize(420,300);
                 frame3.setLocationRelativeTo(null);
             }
         });
-        verSaldoButton.addActionListener(new ActionListener() {
+
+        verSaldoRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(verSaldoButton);
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(verSaldoRadioButton);
                 frame.dispose();
-
+                Color color1= new Color(142, 155, 160);
                 JFrame frame4 = new JFrame("Saldo");
                 frame4.setContentPane(new saldo().PSaldo);
                 frame4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame4.getContentPane().setBackground(color1);
                 frame4.setVisible(true);
                 frame4.setSize(420,300);
                 frame4.setLocationRelativeTo(null);
             }
         });
-        retiroButton.addActionListener(new ActionListener() {
+        retiroRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(retiroButton);
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(retiroRadioButton);
                 frame.dispose();
-
+                Color color1= new Color(142, 155, 160);
                 JFrame frame5 = new JFrame("Retiro");
                 frame5.setContentPane(new retiro().PRetiro);
                 frame5.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame5.getContentPane().setBackground(color1);
                 frame5.setVisible(true);
                 frame5.setSize(420,300);
                 frame5.setLocationRelativeTo(null);
             }
         });
+        salirRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main.frame.setContentPane(new form1().panel1);
+                Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Main.frame.setSize(420,300);
+                Main.frame.setVisible(true);
+                form1.frame2.dispose();
+            }
+        });
+
     }
 }

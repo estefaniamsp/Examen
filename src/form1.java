@@ -16,7 +16,9 @@ public class form1 {
     private JButton a0Button;
     private JButton ENTER;
     private JLabel labelC;
+    private JButton BORRARButton;
     private JPasswordField passwordField1;
+    static JFrame frame2 = new JFrame("Transacciones");
 
     public form1() {
 
@@ -119,5 +121,19 @@ public class form1 {
         });
 
 
+        BORRARButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String backspace = null;
+
+                if (labelC.getText().length() > 0) {
+                    StringBuilder strB = new StringBuilder(labelC.getText());
+                    strB.deleteCharAt(labelC.getText().length() -1);
+                    backspace= String.valueOf(strB);
+                    labelC.setText(backspace);
+                }
+
+            }
+        });
     }
 }

@@ -17,6 +17,7 @@ public class deposito {
     private JButton ENTERButton;
     private JButton MENUButton;
     protected JPanel PDeposito;
+    private JButton BORRARButton;
 
     public deposito() {
 
@@ -112,6 +113,19 @@ public class deposito {
                 frame3.setVisible(true);
                 frame3.setSize(420,300);
                 frame3.setLocationRelativeTo(null);
+            }
+        });
+        BORRARButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String backspace = null;
+
+                if (deposito.getText().length() > 0) {
+                    StringBuilder strB = new StringBuilder(deposito.getText());
+                    strB.deleteCharAt(deposito.getText().length() -1);
+                    backspace= String.valueOf(strB);
+                    deposito.setText(backspace);
+                }
             }
         });
     }
