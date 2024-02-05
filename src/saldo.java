@@ -7,7 +7,8 @@ public class saldo {
     private JLabel saldo;
     public JPanel PSaldo;
 
-    public saldo() {
+    public saldo(double dinero) {
+        saldo.setText(String.valueOf(form2.dinero));
         MENUButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -17,6 +18,7 @@ public class saldo {
                 JFrame frame3 = new JFrame("Cajero");
                 frame3.setContentPane(new form2().panel2);
                 frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.setUndecorated(true);
                 frame3.setVisible(true);
                 frame3.setSize(420,300);
                 frame3.setLocationRelativeTo(null);

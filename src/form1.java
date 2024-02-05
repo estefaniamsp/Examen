@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
+
 public class form1 {
     private JButton a1Button;
     private JButton a2Button;
@@ -17,6 +19,8 @@ public class form1 {
     private JButton ENTER;
     private JLabel labelC;
     private JButton BORRARButton;
+    private JButton CERRARButton;
+    private JButton button1;
     private JPasswordField passwordField1;
     static JFrame frame2 = new JFrame("Transacciones");
 
@@ -96,27 +100,38 @@ public class form1 {
         ENTER.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String contrasenia = labelC.getText();
 
-                String password = "1221";
+                try{
+                    String contrasenia = labelC.getText();
 
-                if (contrasenia.equals(password)) {
+                    String password = "1221";
 
-                    JOptionPane.showMessageDialog(panel1, "Inicio de sesión exitoso");
-                    JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(ENTER);
-                    frame.dispose();
-                    // Abre la pantalla principal después de iniciar sesión
-                    JFrame frame2 = new JFrame("Cajero");
-                    frame2.setContentPane(new form2().panel2);
-                    frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    frame2.setVisible(true);
-                    frame2.setSize(420, 300);
-                    frame2.setLocationRelativeTo(null);
+                    if (contrasenia.equals(password)) {
 
-                }else {
-                    JOptionPane.showMessageDialog(panel1, "Inicio de sesión fallido");
+                        JOptionPane.showMessageDialog(panel1, "Inicio de sesión exitoso");
+                        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(ENTER);
+                        frame.dispose();
+                        // Abre la pantalla principal después de iniciar sesión
+                        JFrame frame2 = new JFrame("Cajero");
+                        frame2.setContentPane(new form2().panel2);
+                        frame2.setUndecorated(true);
+                        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frame2.setVisible(true);
+                        frame2.setSize(420, 300);
+                        frame2.setLocationRelativeTo(null);
+
+                    }else {
+                        JOptionPane.showMessageDialog(panel1, "Inicio de sesión fallido");
+                        labelC.setText("");
+                    }
+
+                }catch(Exception ex){
+
+                    JOptionPane.showMessageDialog(panel1, "Inicio de sesión fallido. Revise sus credenciales");
                     labelC.setText("");
+
                 }
+
             }
         });
 
@@ -133,6 +148,20 @@ public class form1 {
                     labelC.setText(backspace);
                 }
 
+            }
+        });
+        CERRARButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(!labelC.getText().contains(".")){
+                    labelC.setText(labelC.getText()+button1.getText());
+                }
             }
         });
     }

@@ -18,8 +18,9 @@ public class deposito {
     private JButton MENUButton;
     protected JPanel PDeposito;
     private JButton BORRARButton;
+    private JButton button1;
 
-    public deposito() {
+    public deposito(double dinero) {
 
 
         a7Button.addActionListener(new ActionListener() {
@@ -95,9 +96,18 @@ public class deposito {
         ENTERButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                String cantidad= deposito.getText();
-                deposito.setText("");
+                double deposito1 = Double.parseDouble(deposito.getText());
+                form2.dinero+=deposito1;
+                JOptionPane.showMessageDialog(null,"Transacción Exitosa");
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(PDeposito);
+                frame.dispose();
+                JFrame frame3 = new JFrame();
+                frame3.setContentPane(new form2().panel2);
+                frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.setUndecorated(true);
+                frame3.setVisible(true);
+                frame3.setSize(420,300);
+                frame3.setLocationRelativeTo(null);
             }
         });
 
@@ -110,6 +120,7 @@ public class deposito {
                 JFrame frame3 = new JFrame("Cajero");
                 frame3.setContentPane(new form2().panel2);
                 frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.setUndecorated(true);
                 frame3.setVisible(true);
                 frame3.setSize(420,300);
                 frame3.setLocationRelativeTo(null);

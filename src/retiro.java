@@ -1,3 +1,5 @@
+import jdk.nashorn.internal.scripts.JO;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,8 +20,9 @@ public class retiro {
     protected JPanel PRetiro;
     private JButton BORRARButton;
     private JButton MENUButton;
+    private JButton button1;
 
-    public retiro() {
+    public retiro(double dinero) {
         a1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -103,6 +106,7 @@ public class retiro {
                 JFrame frame3 = new JFrame("Cajero");
                 frame3.setContentPane(new form2().panel2);
                 frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.setUndecorated(true);
                 frame3.setVisible(true);
                 frame3.setSize(420,300);
                 frame3.setLocationRelativeTo(null);
@@ -111,6 +115,30 @@ public class retiro {
         ENTERButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                double retiro = Double.parseDouble(Cantidad.getText());
+
+                if (retiro % 10 == 0) {
+
+
+                    if (retiro > form2.dinero) {
+                        JOptionPane.showMessageDialog(null, "Saldo insuficiente");
+                    } else {
+                        form2.dinero -= retiro;
+                        JOptionPane.showMessageDialog(null, "Retiro Exitoso");
+                        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(PRetiro);
+                        frame.dispose();
+                        JFrame frame3 = new JFrame();
+                        frame3.setContentPane(new form2().panel2);
+                        frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frame3.setUndecorated(true);
+                        frame3.setVisible(true);
+                        frame3.setSize(420,300);
+                        frame3.setLocationRelativeTo(null);
+                    }
+
+                }else{
+                    JOptionPane.showMessageDialog(null, "Por favor ten en cuenta que el valor minimo de retiro es $10 y solo se puede retirar cantidades en multiplos de 10.\n Asegurate de ingresar un monto valido antes de continuar. \nGRACIAS!!");
+                }
 
             }
         });
