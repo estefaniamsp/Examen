@@ -14,4 +14,7 @@ public class retiro {
     private JButton a0Button;
     private JButton ENTERButton;
     protected JPanel PRetiro;
+    private JButton BORRARButton;
+    private JButton MENUButton;
 }
+
