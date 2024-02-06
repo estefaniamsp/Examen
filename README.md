@@ -16,17 +16,33 @@ Ventana menu, despliega las opciones con las que se puede interactuar.
 
 Ventana deposito, se ingresa el deposito en la cuenta, y se muestra en el saldo.
 
-![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/88d2cd29-df98-4017-8112-d77f2bf99726)
+![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/d6b22810-8cc3-43dd-b5f0-d55939dd3d65)
 
-![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/b25660d2-8087-4997-b062-ac52092eb6cb)
+![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/5842b0fe-401e-4071-8449-902af0ab3250)
 
-![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/a2290efc-66ed-4d02-b590-433134709f58)
+![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/e1017054-b08c-425f-9e40-cbf5ea2c3521)
 
 Ventana retiro, se ingresa el retiro deseado al igual que en un cajero normal solo se puede retirar en multiplos de 10.
 
-![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/3e46e8a0-c5b9-48ca-afd8-0a238b938277)
+![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/f762582a-fda6-43e5-a340-a9dc9d68815d)
 
-![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/e23a3fcc-40c2-4461-bb11-2865cb061e92)
+![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/888cfd5b-58c6-4ba6-a668-d520c6d5a447)
+
+![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/1c306b57-c02b-4731-8598-516b65111491)
+
+El saldo varia depende el deposito o retiro
+
+![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/d9d98d0e-4ca9-4a27-9582-b1144a8b60e2)
+
+![imagen](https://github.com/estefaniamsp/Examen/assets/133398236/d690530a-5602-4908-8982-3ab7408a058b)
+
+
+
+
+
+
+
+
 
 
 
