@@ -5,6 +5,12 @@ public class Main {
     static JFrame frame = new JFrame("Cajero");
     public static void main(String[] args) {
         Color color1= new Color(220, 231, 236);
+
+        new Ventana();
+
+        
+
+
         JFrame frame = new JFrame("Cajero");
         frame.setContentPane(new form1().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
