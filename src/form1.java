@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 
@@ -18,11 +19,11 @@ public class form1 { //clase para el inicio de sesion
     private JButton a9Button;
     private JButton a0Button;
     private JButton ENTER;
-    private JLabel labelC;
+    private JPasswordField labelC;
+    //private JLabel labelC;
     private JButton BORRARButton;
     private JButton CERRARButton;
     private JButton button1;
-    private JPasswordField passwordField1;
     static JFrame frame2 = new JFrame("Transacciones"); //objeto estatico
 
     public form1() { //constructor con los componentes
@@ -103,11 +104,11 @@ public class form1 { //clase para el inicio de sesion
             public void actionPerformed(ActionEvent e) {
 
                 try{ //manejo de inicio de sesion
-                    String contrasenia = labelC.getText(); //se obtiene la contraseña en el campo labelC
+                    char[] contrasenia = labelC.getPassword(); //se obtiene la contraseña en el campo labelC
 
                     String password = "1221"; //dato quemado
 
-                    if (contrasenia.equals(password)) {// se compara el password ingresado con el dato quemado
+                    if (Arrays.equals(contrasenia, password.toCharArray())) {// se compara el password ingresado con el dato quemado
                         Color color1= new Color(220, 231, 236);
                         JOptionPane.showMessageDialog(panel1, "Inicio de sesión exitoso");
                         JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(ENTER);
