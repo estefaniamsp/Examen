@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,11 +20,9 @@ public class deposito {
     protected JPanel PDeposito;
     private JButton BORRARButton;
     private JButton button1;
-    private JButton button2;
+    private JButton button2; //esta de decoracion para no hacer tan vacio el panel numerico
 
-    public deposito(double dinero) {
-
-
+    public deposito(double dinero) {//contructor con parametro dinero de tipo double
         a7Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -98,13 +97,17 @@ public class deposito {
             @Override
             public void actionPerformed(ActionEvent e) {
                 double deposito1 = Double.parseDouble(deposito.getText());
-                form2.dinero+=deposito1;
+                //se convierte el deposito1 de string a double
+                form2.dinero+=deposito1; //se suma el deposito1 al dinero (saldo)
+                Color color1= new Color(220, 231, 236);
                 JOptionPane.showMessageDialog(null,"Transacción Exitosa");
-                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(PDeposito);
+                //se muestra un mensaje si la transaccion se ha realizado con exito
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(PDeposito);//cierre de la ventana
                 frame.dispose();
                 JFrame frame3 = new JFrame();
                 frame3.setContentPane(new form2().panel2);
                 frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.getContentPane().setBackground(color1);
                 frame3.setUndecorated(true);
                 frame3.setVisible(true);
                 frame3.setSize(420,300);
@@ -112,22 +115,23 @@ public class deposito {
             }
         });
 
-        MENUButton.addActionListener(new ActionListener() {
+        MENUButton.addActionListener(new ActionListener() { //regreso al menu
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(PDeposito);
                 frame.dispose();
-
+                Color color1= new Color(220, 231, 236);
                 JFrame frame3 = new JFrame("Cajero");
                 frame3.setContentPane(new form2().panel2);
                 frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.getContentPane().setBackground(color1);
                 frame3.setUndecorated(true);
                 frame3.setVisible(true);
                 frame3.setSize(420,300);
                 frame3.setLocationRelativeTo(null);
             }
         });
-        BORRARButton.addActionListener(new ActionListener() {
+        BORRARButton.addActionListener(new ActionListener() { //para borrar algun digito en el panel numerico
             @Override
             public void actionPerformed(ActionEvent e) {
                 String backspace = null;
@@ -140,7 +144,7 @@ public class deposito {
                 }
             }
         });
-        button1.addActionListener(new ActionListener() {
+        button1.addActionListener(new ActionListener() { //para colocar punto
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!deposito.getText().contains(".")){

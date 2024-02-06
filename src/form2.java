@@ -3,41 +3,44 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class form2 {
+public class form2 { //clase para el menu
 
     protected JPanel panel2;
-    private JRadioButton depositoRadioButton;
+    private JRadioButton depositoRadioButton; //botones de opciones
     private JRadioButton retiroRadioButton;
     private JRadioButton verSaldoRadioButton;
     private JRadioButton salirRadioButton;
-    static double dinero = 0;
+    static double dinero = 0; //objeto estatico, almacena el saldo actual
 
-    public form2() {
-        ButtonGroup buttonGroup = new ButtonGroup();
+    public form2() { //contructor con los componentes de radiobutton
+        ButtonGroup buttonGroup = new ButtonGroup(); //se agrega los 4 botones en un solo grupo para
+        //asegurar la eleccion de unicamente un boton
         buttonGroup.add(depositoRadioButton);
         buttonGroup.add(verSaldoRadioButton);
         buttonGroup.add(retiroRadioButton);
         buttonGroup.add(salirRadioButton);
 
-        depositoRadioButton.addActionListener(new ActionListener() {
+        depositoRadioButton.addActionListener(new ActionListener() {//para el deposito del dinero
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(depositoRadioButton);
-                frame.dispose();
+                frame.dispose();//cierre de pantalla actual al presionar el boton
 
-                Color color1= new Color(142, 155, 160);
-                JFrame frame3 = new JFrame("Deposito");
-                frame3.setContentPane(new deposito(form2.dinero).PDeposito);
-                frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame3.setUndecorated(true);
-                frame3.getContentPane().setBackground(color1);
-                frame3.setVisible(true);
-                frame3.setSize(420,300);
-                frame3.setLocationRelativeTo(null);
+                Color color1= new Color(220, 231, 236);// se define el color de fondo
+                JFrame frame3 = new JFrame("Deposito");//se crea una nueva instancia
+                frame3.setContentPane(new deposito(form2.dinero).PDeposito);//se establece el panel de contenido
+                //en este caso de deposito
+                frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//cierre por completo de la ventana
+                frame3.setUndecorated(true);// se establece que la ventana no tenga decoracion, en este caso
+                //botones de maximizar, minimizar y cerrar
+                frame3.getContentPane().setBackground(color1);//se establece al panel de contenido un fondo
+                frame3.setVisible(true);//para que la ventana sea visible
+                frame3.setSize(420,300);//tamaño de la pantalla
+                frame3.setLocationRelativeTo(null);//para que la pantalla aparezca en medio y no en una esquina
             }
         });
 
-        verSaldoRadioButton.addActionListener(new ActionListener() {
+        verSaldoRadioButton.addActionListener(new ActionListener() {// para visualizar el saldo
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(verSaldoRadioButton);
@@ -53,7 +56,7 @@ public class form2 {
                 frame4.setLocationRelativeTo(null);
             }
         });
-        retiroRadioButton.addActionListener(new ActionListener() {
+        retiroRadioButton.addActionListener(new ActionListener() { //para retirar dinero
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(retiroRadioButton);
@@ -69,16 +72,20 @@ public class form2 {
                 frame5.setLocationRelativeTo(null);
             }
         });
-        salirRadioButton.addActionListener(new ActionListener() {
+        salirRadioButton.addActionListener(new ActionListener() { //para salir del menu y regresar al inicio
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main.frame.setContentPane(new form1().panel1);
-                Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                Main.frame.setUndecorated(true);
-                Main.frame.setSize(420,300);
-                Main.frame.setVisible(true);
-                Main.frame.setLocationRelativeTo(null);
-                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(panel2);
+                Color color1= new Color(220, 231, 236);
+                Main.frame.setContentPane(new form1().panel1); //contenido del marco principal, donde
+                //se accede al panel1
+                Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// cierre por completo de la ventana
+                Main.frame.getContentPane().setBackground(color1);
+                Main.frame.setUndecorated(true); // sin decoraciones
+                Main.frame.setSize(420,300); //tamaño de la ventana
+                Main.frame.setVisible(true);//visibilidad
+                Main.frame.setLocationRelativeTo(null);//ventana en medio y no esquina
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(panel2); //se obtiene el JFrame del
+                //panel2 para el cierre de la ventana
                 frame.dispose();
             }
         });
