@@ -98,20 +98,29 @@ public class deposito {
             public void actionPerformed(ActionEvent e) {
                 double deposito1 = Double.parseDouble(deposito.getText());
                 //se convierte el deposito1 de string a double
-                form2.dinero+=deposito1; //se suma el deposito1 al dinero (saldo)
-                Color color1= new Color(220, 231, 236);
-                JOptionPane.showMessageDialog(null,"Transacción Exitosa");
-                //se muestra un mensaje si la transaccion se ha realizado con exito
-                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(PDeposito);//cierre de la ventana
-                frame.dispose();
-                JFrame frame3 = new JFrame();
-                frame3.setContentPane(new form2().panel2);
-                frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame3.getContentPane().setBackground(color1);
-                frame3.setUndecorated(true);
-                frame3.setVisible(true);
-                frame3.setSize(420,300);
-                frame3.setLocationRelativeTo(null);
+
+                if(deposito1%10 == 0){
+                    form2.dinero+=deposito1; //se suma el deposito1 al dinero (saldo)
+                    Color color1= new Color(220, 231, 236);
+                    JOptionPane.showMessageDialog(null,"Transacción Exitosa");
+                    //se muestra un mensaje si la transaccion se ha realizado con exito
+                    JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(PDeposito);//cierre de la ventana
+                    frame.dispose();
+                    JFrame frame3 = new JFrame();
+                    frame3.setContentPane(new form2().panel2);
+                    frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame3.getContentPane().setBackground(color1);
+                    frame3.setUndecorated(true);
+                    frame3.setVisible(true);
+                    frame3.setSize(420,300);
+                    frame3.setLocationRelativeTo(null);
+
+                }else{
+                    JOptionPane.showMessageDialog(null, "Por favor ten en cuenta que el valor minimo de deposito es $10 y solo se puede depositar cantidades en multiplos de 10.\n Asegurate de ingresar un monto valido antes de continuar. \nGRACIAS!!");
+                    deposito.setText("");//si no es un multiplo de 10 se muestra el mensaje
+                }
+
+
             }
         });
 
