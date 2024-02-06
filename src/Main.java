@@ -8,9 +8,6 @@ public class Main {
 
         new Ventana();
 
-        
-
-
         JFrame frame = new JFrame("Cajero");
         frame.setContentPane(new form1().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

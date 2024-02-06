@@ -17,18 +17,18 @@ public class Ventana extends JFrame {
 
         // Mensaje principal
         JLabel labelMensaje = new JLabel("<html><center>Banco Politécnico<br>Bienvenido a la red de cajeros automáticos más grande del campus</center></html>");
-        labelMensaje.setFont(new Font("Arial", Font.BOLD, 20));
+        labelMensaje.setFont(new Font("Fire Code", Font.BOLD, 20));
         labelMensaje.setHorizontalAlignment(JLabel.CENTER);
 
         // Imagen desde una URL
-        String urlImagen = "https://www.datafast.com.ec/images/logos/marcas-tarjetas.png";  // Reemplaza con la URL de tu imagen
+        String urlImagen = "https://www.datafast.com.ec/images/logos/marcas-tarjetas.png";
         try {
             ImageIcon icono = new ImageIcon(new ImageIcon(new URL(urlImagen)).getImage().getScaledInstance(490, 90, java.awt.Image.SCALE_SMOOTH));
             JLabel labelImagen = new JLabel(icono);
 
             // Mensaje adicional
             JLabel labelAdicional = new JLabel("Ingrese su tarjeta para continuar");
-            labelAdicional.setFont(new Font("Arial", Font.PLAIN, 16));
+            labelAdicional.setFont(new Font("Fire Code", Font.PLAIN, 16));
             labelAdicional.setHorizontalAlignment(JLabel.CENTER);
 
             // Ajustar el diseño
