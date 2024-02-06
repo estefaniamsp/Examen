@@ -45,7 +45,7 @@ public class form2 { //clase para el menu
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(verSaldoRadioButton);
                 frame.dispose();
-                Color color1= new Color(142, 155, 160);
+                Color color1= new Color(220, 231, 236);
                 JFrame frame4 = new JFrame("Saldo");
                 frame4.setContentPane(new saldo(form2.dinero).PSaldo);
                 frame4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -61,7 +61,7 @@ public class form2 { //clase para el menu
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(retiroRadioButton);
                 frame.dispose();
-                Color color1= new Color(142, 155, 160);
+                Color color1= new Color(220, 231, 236);
                 JFrame frame5 = new JFrame("Retiro");
                 frame5.setContentPane(new retiro(form2.dinero).PRetiro);
                 frame5.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
