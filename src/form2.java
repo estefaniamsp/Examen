@@ -79,8 +79,8 @@ public class form2 { //clase para el menu
                 Main.frame.setContentPane(new form1().panel1); //contenido del marco principal, donde
                 //se accede al panel1
                 Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// cierre por completo de la ventana
-                Main.frame.getContentPane().setBackground(color1);
                 Main.frame.setUndecorated(true); // sin decoraciones
+                Main.frame.getContentPane().setBackground(color1);
                 Main.frame.setSize(420,300); //tamaño de la ventana
                 Main.frame.setVisible(true);//visibilidad
                 Main.frame.setLocationRelativeTo(null);//ventana en medio y no esquina

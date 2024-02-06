@@ -110,9 +110,9 @@ public class retiro {
                 frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame3.getContentPane().setBackground(color1);
                 frame3.setUndecorated(true);
-                frame3.setVisible(true);
                 frame3.setSize(420,300);
                 frame3.setLocationRelativeTo(null);
+                frame3.setVisible(true);
             }
         });
         ENTERButton.addActionListener(new ActionListener() {//ingresar el valor puesto
@@ -137,9 +137,9 @@ public class retiro {
                         frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         frame3.getContentPane().setBackground(color1);
                         frame3.setUndecorated(true);
-                        frame3.setVisible(true);
                         frame3.setSize(420,300);
                         frame3.setLocationRelativeTo(null);
+                        frame3.setVisible(true);
                     }
 
                 }else{
